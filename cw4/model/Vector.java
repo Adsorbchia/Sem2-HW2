@@ -56,12 +56,56 @@ public class Vector {
 
     /**
      *
-     * @param vector2 - вектор
-     * @return
+     * @param vector2 -  второй вектор
+     * @return - скалярное произведение
      */
     public double scMulti(Vector vector2){
         return this.x* vector2.x + this.y* vector2.y+ this.z* vector2.z;
 
     }
 
+    /**
+     *
+     * @param vector2 второй вектор
+     * @return векторное произведение
+     */
+    public Vector vectorMulti(Vector vector2) {
+        return new Vector(this.y* vector2.z - this.z * vector2.y,
+                this.z* vector2.x - this.x * vector2.z,
+                this.x * vector2.y - this.y * vector2.x);
+
+    }
+
+    /**
+     *
+     * @param vector2 - второй вектор
+     * @return косинус угла между векторами
+     */
+    public double cosVector(Vector vector2) {
+        return scMulti(vector2)/(LengthVector()* vector2.LengthVector());
+    }
+
+    /**
+     *
+     * @param vector2 второй вектор
+     *
+     * @return сумма векторов
+     */
+    public Vector sumVector(Vector vector2) {
+        return new Vector(this.x+vector2.x,
+                this.y+vector2.y,
+                this.z +vector2.z);
+    }
+
+    /**
+     *
+     * @param vector2 второй вектор
+     *
+     * @return разность векторов
+     */
+    public Vector differenceVector(Vector vector2) {
+        return new Vector(this.x-vector2.x,
+                this.y-vector2.y,
+                this.z-vector2.z);
+    }
 }
