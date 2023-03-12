@@ -13,6 +13,7 @@ public class Task2 {
         }
         System.out.println(CheckNum(array)? "последовательность возрастающая":
                 "Нет, последовательность не является возрастающей");
+        sc.close();
         }
 
     /**
