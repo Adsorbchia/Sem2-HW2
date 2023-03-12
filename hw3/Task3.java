@@ -8,15 +8,19 @@ public class Task3 {
         int sum=0;
         for (int i = 0; i < array.length; i++) {
 
-            if (array[i]>9 && array[i]<100){
+            if ((array[i]>9 & array[i] < 100) || (array[i]<-9 & array[i]>-100)){
                 sum+=i;
 
             }
 
-        }System.out.println(sum);
+
+        }
+            System.out.println(sum);
         newArray(array,sum);
 
-
+/**
+ *
+ */
 
 
     }
